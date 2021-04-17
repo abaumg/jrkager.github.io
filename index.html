@@ -17,6 +17,12 @@
         font: normal 12px arial, tahoma, helvetica, sans-serif;
     }
     </style>
+    <script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const name = urlParams.get('name');
+    document.getElementById("name").innerHTML = "bla";
+    </script>
     <LINK REL="SHORTCUT ICON" HREF="/utils/images/asdaa_icon.png">
   </head>
   <body>
@@ -29,9 +35,12 @@
 <img src='ok_icon.png' height='30%'>
 </div>
 <div align="center" style="padding-top: 20px;">
-<h1>GASSER JOHANNA</h1>
+<h1 id="name">GASSER JOHANNA</h1>
 </div>
 <!-- (esito=NEG  strDataEsame=2021-04-16  strDataOk=2021-04-14) -->
+<script>
+document.getElementById("name").innerHTML = name.toUpperCase();
+</script>
 
   </body>
 </html>
